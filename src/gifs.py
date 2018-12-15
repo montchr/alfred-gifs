@@ -42,7 +42,7 @@ def load_gifs():
     """Return list of `Gif` objects."""
     gifs = []
     for fn in os.listdir(GIF_DIR):
-        if fn.lower().endswith('.gif'):
+        if fn.lower().endswith(('.gif', '.png', '.jpg')):
             name = os.path.splitext(fn)[0]
             path = os.path.join(GIF_DIR, fn)
             icon = thumbs.thumbnail(path)
